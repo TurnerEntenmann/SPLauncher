@@ -3,13 +3,6 @@ version: "2.0"
 intents:
   - fsearch
   - asearch
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
 
 entities:
   - file_name
@@ -25,31 +18,6 @@ slots:
   app_name:
     type: text
 
-responses:
-  utter_ask_file:
-  - text: "What file do you want to open?"
-  
-  utter_ask_app:
-  - text: "What app do you want to open?"
-  
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
 
 session_config:
   session_expiration_time: 60

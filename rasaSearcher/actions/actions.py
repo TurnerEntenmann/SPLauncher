@@ -37,7 +37,7 @@ class fsearch_action(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             
             name = tracker.get_slot("file_name")
-            command = "spSearcher f " + "target.txt"
+            command = "spSearcher f " + str(name)
             os.system(command)
             return []
         
@@ -47,6 +47,10 @@ class asearch_action(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        os.system("spSearcher a google-chrome")
+            
+            
+        name = tracker.get_slot("app_name")
+        print(name)
+        os.system("spSearcher a " + str(name))
                 
         return []
